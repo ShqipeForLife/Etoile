@@ -9,7 +9,12 @@
 <meta property="og:title" content="Étoile – Plus d’avis authentiques, sans relancer un par un">
 <meta property="og:description" content="Un lien ou un QR code après la prestation, une relance par e-mail au bout de deux jours. 39 €/mois.">
 <meta property="og:locale" content="fr_FR">
-<!-- À AJOUTER PLUS TARD : <meta property="og:image" content="https://TON-SITE.vercel.app/apercu.png"> (image 1200x630) -->
+<!-- À REMPLACER : TON-SITE.vercel.app par l'adresse de ton site (2 endroits) -->
+<meta property="og:url" content="https://TON-SITE.vercel.app/">
+<meta property="og:image" content="https://TON-SITE.vercel.app/apercu.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14213d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213d'/%3E%3Cpath d='M32 10l6.5 14 15.5 1.8-11.6 10.4 3.2 15.2L32 43.5 18.4 51.4l3.2-15.2L10 25.8 25.5 24z' fill='%23f5b700'/%3E%3C/svg%3E">
 <style>
@@ -196,10 +201,10 @@ footer .liens{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}
   <div class="wrap">
     <strong style="color:#fff">Étoile</strong>
     <div class="liens">
-      <!-- Pages légales : ajoutées à l'étape suivante (mentions légales, CGV, confidentialité) -->
-      <span>Mentions légales</span><span>Conditions générales de vente</span><span>Politique de confidentialité</span>
+      <a href="/mentions-legales.html">Mentions légales</a><a href="/cgv.html">Conditions générales de vente</a><a href="/confidentialite.html">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
