@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étoile – Plus d’avis authentiques sur Google, sans relancer un par un</title>
+<meta name="description" content="Envoyez un lien ou un QR code après chaque prestation. Étoile relance par e-mail et récolte des avis authentiques, bons ou mauvais. 39 €/mois, remboursé 14 jours.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Étoile – Plus d’avis authentiques, sans relancer un par un">
+<meta property="og:description" content="Un lien ou un QR code après la prestation, une relance par e-mail au bout de deux jours. 39 €/mois.">
+<meta property="og:locale" content="fr_FR">
+<!-- À AJOUTER PLUS TARD : <meta property="og:image" content="https://TON-SITE.vercel.app/apercu.png"> (image 1200x630) -->
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213d'/%3E%3Cpath d='M32 10l6.5 14 15.5 1.8-11.6 10.4 3.2 15.2L32 43.5 18.4 51.4l3.2-15.2L10 25.8 25.5 24z' fill='%23f5b700'/%3E%3C/svg%3E">
+<style>
+:root{
+  --nuit:#14213d; --nuit-2:#2b3a5c; --jaune:#f5b700; --jaune-fonce:#8a6500;
+  --fond:#f5f6f8; --blanc:#fff; --trait:#d9dde5; --texte:#1c2433; --doux:#4d586b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texte);background:var(--fond);line-height:1.55;font-size:17px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;color:var(--nuit);letter-spacing:-.01em}
+h1{font-size:clamp(2rem,8vw,3.4rem);font-weight:700}
+h2{font-size:clamp(1.55rem,5.5vw,2.2rem);font-weight:700;margin-bottom:.75rem}
+h3{font-size:1.15rem;margin-bottom:.35rem}
+p{max-width:62ch}
+a{color:inherit}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:52px 0}
+.btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;background:var(--jaune);color:var(--nuit);font-weight:700;font-size:1.05rem;text-decoration:none;border-radius:10px;border:2px solid var(--nuit);width:100%}
+.btn:hover{background:#ffc726}
+.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--nuit);outline-offset:3px}
+.note{font-size:.9rem;color:var(--doux);margin-top:.7rem}
+
+/* Haut de page */
+header.top{background:var(--nuit);color:var(--blanc)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:Georgia,serif;font-weight:700;font-size:1.35rem;text-decoration:none;color:var(--blanc)}
+.logo span{color:var(--jaune)}
+.hero{background:var(--nuit);color:var(--blanc);padding:28px 0 56px}
+.hero h1{color:var(--blanc)}
+.hero p.lead{font-size:1.15rem;color:#dbe1ee;margin:1.1rem 0 1.6rem}
+.hero .btn{max-width:420px}
+.hero .note{color:#b7c0d4}
+
+/* L'avis qu'on ne laisse pas */
+.etoiles{display:flex;gap:6px;margin-bottom:16px}
+.etoiles svg{width:26px;height:26px}
+.douleur{display:grid;gap:14px;margin-top:22px}
+.douleur div{background:var(--blanc);border:1px solid var(--trait);border-left:6px solid var(--jaune);padding:18px 20px;border-radius:6px}
+.douleur strong{display:block;font-family:Georgia,serif;color:var(--nuit);font-size:1.1rem;margin-bottom:4px}
+
+/* Bénéfices */
+.benefices{display:grid;gap:22px;margin-top:24px}
+.benefices article{border-top:3px solid var(--nuit);padding-top:14px}
+
+/* Étapes */
+.etapes{background:var(--blanc);border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.etapes ol{list-style:none;counter-reset:e;display:grid;gap:18px;margin-top:22px}
+.etapes li{counter-increment:e;position:relative;padding-left:52px}
+.etapes li::before{content:counter(e);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--nuit);color:var(--jaune);font-family:Georgia,serif;font-weight:700;display:grid;place-items:center}
+
+/* Engagement honnêteté */
+.promesse{background:var(--nuit-2);color:var(--blanc)}
+.promesse h2{color:var(--blanc)}
+.promesse p{color:#e3e8f3}
+
+/* Offre */
+.offre{background:var(--blanc);border:2px solid var(--nuit);border-radius:12px;padding:26px 22px;margin-top:22px;max-width:520px}
+.prix{font-family:Georgia,serif;font-size:3rem;font-weight:700;color:var(--nuit);line-height:1}
+.prix small{font-size:1rem;font-family:system-ui,sans-serif;font-weight:400;color:var(--doux)}
+.offre ul{list-style:none;margin:18px 0}
+.offre li{padding:7px 0 7px 28px;position:relative;border-bottom:1px solid var(--trait)}
+.offre li::before{content:"";position:absolute;left:4px;top:15px;width:9px;height:15px;border:solid var(--jaune-fonce);border-width:0 3px 3px 0;transform:translateY(-4px) rotate(40deg) scale(.7)}
+.garantie{background:var(--fond);border-left:5px solid var(--jaune);padding:14px 16px;margin:0 0 18px;font-size:.98rem;border-radius:4px}
+
+/* FAQ */
+details{background:var(--blanc);border:1px solid var(--trait);border-radius:8px;margin-top:10px}
+summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--nuit);list-style:none;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--jaune-fonce)}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 18px;color:var(--doux)}
+
+footer{background:var(--nuit);color:#b7c0d4;padding:32px 0 40px;font-size:.92rem}
+footer .liens{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}
+
+@media(min-width:760px){
+  section{padding:76px 0}
+  .btn{width:auto;display:inline-flex}
+  .douleur{grid-template-columns:repeat(3,1fr)}
+  .benefices{grid-template-columns:repeat(3,1fr)}
+  .etapes ol{grid-template-columns:repeat(3,1fr)}
+  .hero{padding:56px 0 80px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap"><a class="logo" href="#">Étoile<span>.</span></a></div>
+</header>
+
+<main>
+<section class="hero" style="padding-top:36px">
+  <div class="wrap">
+    <div class="etoiles" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="#f5b700"><path d="M12 2l3 6.9 7.4.7-5.6 4.9 1.7 7.3L12 17.8 5.5 21.8l1.7-7.3L1.6 9.6 9 8.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#f5b700"><path d="M12 2l3 6.9 7.4.7-5.6 4.9 1.7 7.3L12 17.8 5.5 21.8l1.7-7.3L1.6 9.6 9 8.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#f5b700"><path d="M12 2l3 6.9 7.4.7-5.6 4.9 1.7 7.3L12 17.8 5.5 21.8l1.7-7.3L1.6 9.6 9 8.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#f5b700"><path d="M12 2l3 6.9 7.4.7-5.6 4.9 1.7 7.3L12 17.8 5.5 21.8l1.7-7.3L1.6 9.6 9 8.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#f5b700"><path d="M12 2l3 6.9 7.4.7-5.6 4.9 1.7 7.3L12 17.8 5.5 21.8l1.7-7.3L1.6 9.6 9 8.9z"/></svg>
+    </div>
+    <h1>Vos clients contents ne laissent pas d’avis. On s’en occupe.</h1>
+    <p class="lead">Envoyez un lien ou un QR code après chaque prestation. Étoile relance par e-mail au bout de deux jours, sans que vous ayez à y penser.</p>
+    <a class="btn" href="#offre">Commencer</a>
+    <p class="note">Accès anticipé · remboursé sous 14 jours si ça ne vous convient pas</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Le problème : seuls les mécontents écrivent</h2>
+    <p>La note affichée en ligne décide de qui reçoit l’appel et de qui est ignoré. Pourtant, la plupart des clients satisfaits oublient de la laisser, et personne n’a le temps de relancer un par un.</p>
+    <div class="douleur">
+      <div><strong>Le client content part sans rien dire</strong>Il a aimé, il le pense, mais il n’y reviendra pas une fois dehors.</div>
+      <div><strong>Le client déçu, lui, écrit tout de suite</strong>Sa note pèse autant que celles de dix clients satisfaits silencieux.</div>
+      <div><strong>Vous n’avez pas le temps de relancer</strong>Envoyer un message à chaque client, un par un, ne tient pas dans une journée.</div>
+    </div>
+  </div>
+</section>
+
+<section class="etapes">
+  <div class="wrap">
+    <h2>Comment ça marche</h2>
+    <ol>
+      <li><h3>Vous envoyez le lien</h3><p>Après la prestation, par message ou en montrant le QR code au comptoir.</p></li>
+      <li><h3>Le client laisse son avis</h3><p>En quelques secondes, sans créer de compte, sur votre fiche publique.</p></li>
+      <li><h3>Étoile relance à votre place</h3><p>Deux jours plus tard, un e-mail rappelle poliment à ceux qui n’ont pas répondu.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Ce que vous obtenez</h2>
+    <div class="benefices">
+      <article><h3>Plus d’avis, plus vite</h3><p>Chaque client reçoit une demande simple, au bon moment, sans effort de votre part.</p></article>
+      <article><h3>Un tableau de bord lisible</h3><p>Avis captés, note moyenne et alertes en un coup d’œil, sur votre téléphone.</p></article>
+      <article><h3>Aucune relance à faire</h3><p>Le rappel part tout seul par e-mail. Vous n’avez rien à planifier.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="promesse">
+  <div class="wrap">
+    <h2>Tous les avis, sans tri</h2>
+    <p>Étoile ne filtre pas les avis négatifs et ne cache aucune note. Tous les clients sont dirigés vers la même fiche publique, quelle que soit leur satisfaction. C’est plus honnête, c’est conforme aux règles de Google et à la loi française, et des avis authentiques inspirent davantage confiance qu’une note parfaite et suspecte.</p>
+  </div>
+</section>
+
+<section id="offre">
+  <div class="wrap">
+    <h2>Une seule offre, simple</h2>
+    <p>Étoile est en accès anticipé : le produit est en construction et vous êtes parmi les premiers à l’utiliser. Vous êtes remboursé si vous n’êtes pas satisfait.</p>
+    <div class="offre">
+      <div class="prix">39 €<small> /mois par établissement</small></div>
+      <p class="note" style="margin-top:6px">Soit environ 1,30 € par jour</p>
+      <ul>
+        <li>Lien et QR code pour récolter des avis</li>
+        <li>Relance automatique par e-mail à deux jours</li>
+        <li>Tableau de bord : avis, note moyenne, alertes</li>
+      </ul>
+      <p class="garantie"><strong>Remboursé 14 jours.</strong> Écrivez-nous dans les 14 jours suivant votre inscription et nous vous remboursons l’intégralité, sans justification.</p>
+      <!-- À REMPLACER : mets ton adresse e-mail à la place de TON-EMAIL@exemple.fr (étape suivante : bouton de paiement Stripe en mode test) -->
+      <a class="btn" href="mailto:TON-EMAIL@exemple.fr?subject=Accès%20anticipé%20Étoile">Rejoindre l’accès anticipé</a>
+      <p class="note">Sans engagement, résiliable à tout moment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="etapes">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Est-ce que ça marche pour mon activité ?</summary><p>Étoile est pensé pour les commerces et services locaux qui dépendent de leur fiche en ligne : si vos clients passent chez vous ou vous appellent, c’est fait pour vous.</p></details>
+    <details><summary>Combien de temps ça me prend ?</summary><p>Quelques minutes pour la mise en route. Ensuite, il suffit d’envoyer le lien après chaque prestation : la relance se fait toute seule.</p></details>
+    <details><summary>Que se passe-t-il si je veux arrêter ?</summary><p>Vous résiliez quand vous voulez, sans frais ni préavis. Dans les 14 premiers jours, vous êtes en plus remboursé.</p></details>
+    <details><summary>À quoi sert exactement ce que je paie ?</summary><p>À l’outil qui génère votre lien et votre QR code, envoie les relances par e-mail et affiche votre tableau de bord. Rien d’autre n’est facturé.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong style="color:#fff">Étoile</strong>
+    <div class="liens">
+      <!-- Pages légales : ajoutées à l'étape suivante (mentions légales, CGV, confidentialité) -->
+      <span>Mentions légales</span><span>Conditions générales de vente</span><span>Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
